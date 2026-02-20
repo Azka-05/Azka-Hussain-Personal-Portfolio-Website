@@ -752,3 +752,38 @@ html, body { overflow-x: hidden; }
     display: flex;
   }
 }
+/* ===== Apple-ish interactive card ===== */
+.home-current{
+  position: relative;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 280ms cubic-bezier(.2,.8,.2,1), box-shadow 280ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* Lift on hover */
+@media (hover:hover) and (pointer:fine){
+  .home-current:hover{
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 22px 55px rgba(0,0,0,0.45);
+  }
+}
+
+/* Cursor glow inside the card */
+.home-current::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: inherit;
+  pointer-events:none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+  background: radial-gradient(600px circle at var(--mx,50%) var(--my,50%),
+    rgba(180,120,255,0.22),
+    rgba(180,120,255,0.10) 35%,
+    transparent 60%);
+}
+
+@media (hover:hover) and (pointer:fine){
+  .home-current:hover::before{ opacity: 1; }
+}

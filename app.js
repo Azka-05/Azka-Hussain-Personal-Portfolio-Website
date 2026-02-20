@@ -232,3 +232,71 @@ const $ = (sel, root = document) => root.querySelector(sel);
     }
   });
 })();
+
+// ===== Interactive tilt + glow for the "Currently" card (index) =====
+(() => {
+  const card = document.querySelector(".home-current");
+  if (!card) return;
+
+  // Only on desktop-like pointers
+  const canHover = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
+  if (!canHover) return;
+
+  const damp = 18; // bigger = slower/less tilt
+  const maxTilt = 10; // degrees
+
+  function onMove(e){
+    const r = card.getBoundingClientRect();
+    const x = e.clientX - r.left;
+    const y = e.clientY - r.top;
+
+    // set glow position
+    card.style.setProperty("--mx", `${(x / r.width) * 100}%`);
+    card.style.setProperty("--my", `${(y / r.height) * 100}%`);
+
+    // tilt
+    const cx = r.width / 2;
+    const cy = r.height / 2;
+    const dx = (x - cx) / cx;   // -1..1
+    const dy = (y - cy) / cy;   // -1..1
+
+    const tiltY = dx * maxTilt;     // rotateY
+    const tiltX = -dy * maxTilt;    // rotateX
+
+    card.style.transform = `translateY(-8px) scale(1.01) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+  }
+
+  function onLeave(){
+    card.style.transform = "";
+    card.style.removeProperty("--mx");
+    card.style.removeProperty("--my");
+  }
+
+  card.addEventListener("mousemove", onMove);
+  card.addEventListener("mouseleave", onLeave);
+})();
+
+// ===== Tiny scroll parallax (subtle) =====
+(() => {
+  const card = document.querySelector(".home-current");
+  if (!card) return;
+
+  let raf = null;
+  const strength = 8; // px (keep small)
+
+  function onScroll(){
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      raf = null;
+      const y = window.scrollY || 0;
+      const offset = Math.sin(y / 240) * strength;
+      // only add if not actively hovering/tilting
+      if (!card.matches(":hover")) {
+        card.style.transform = `translateY(${offset}px)`;
+      }
+    });
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
