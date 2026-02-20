@@ -1,196 +1,234 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Projects — Azka Hussain</title>
-<meta content="Projects by Azka Hussain — hackathons, university builds, and web experiments." name="description"/>
-<link href="styles.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Projects — Azka Hussain</title>
+  <meta content="Projects by Azka Hussain — hackathons, university builds, and web experiments." name="description"/>
+  <link href="styles.css" rel="stylesheet"/>
 </head>
+
 <body>
-<canvas class="fx-canvas" id="fx"></canvas>
-<div aria-hidden="true" class="cursor-glow" id="glow"></div>
-<header class="topbar" data-elevate="">
-<div class="container nav-inner">
-<a aria-label="Home" class="logo" href="index.html">
-<span aria-hidden="true" class="logo-badge"></span>
-<span>Azka Hussain</span>
-</a>
-<div class="nav">
-<button aria-expanded="false" aria-label="Open menu" class="nav__toggle">☰</button>
-<nav aria-label="Primary" class="nav__menu">
-<a href="about.html">About</a>
-<a href="experience.html">Experience</a>
-<a href="projects.html">Projects</a>
-<a class="pill" href="contact.html">Contact</a>
-</nav>
-</div>
-</div>
-</header>
-<main class="container">
-<section class="reveal" id="featured">
-<div class="kicker">Projects</div>
-<h1 class="title-gradient">Things I’ve built! </h1>
-<p class="subtitle">A few favourites — click a project to learn more.</p>
-</section>
-<section class="grid three" style="margin-top:10px">
-<article class="card project reveal" data-tags="web,hackathon,design">
-<div class="kicker">NASA Space Apps · Oct 2025</div>
-<a href="https://github.com/Azka-05/4Bytes" target="_blank" class="pill">GitHub</a>
-<h3>WeatherBytes</h3>
-<p class="muted">Real-time weather + NASA AIRS data to predict and visualise extreme weather conditions.</p>
-<div class="meta-row">
-<span class="badge">APIs</span>
-<span class="badge">Data viz</span>
-<span class="badge">Team build</span>
-</div>
-<div class="hero-actions" style="margin-top:14px">
-</div>
-</article>
-<article class="card project reveal" data-tags="python,web">
-<div class="kicker">University · Sep 2024</div>
-<h3>Hospital Management System</h3>
-<a href="https://github.com/Azka-05/Hospital-Management-System" target="_blank" class="project-link">View on GitHub  → </a>
-<p class="muted">Python-based records system: patients, staff, appointments — with authentication and structured data handling.</p>
-<div class="meta-row">
-<span class="badge">Python</span>
-<span class="badge">CRUD</span>
-<span class="badge">Auth</span>
-</div>
-<div class="hero-actions" style="margin-top:14px">
-</div>
-</article>
-<article class="card project reveal" data-tags="hackathon,web">
-<div class="kicker">Hack-Nation × MIT Sloan AI Club · Aug 2025</div>
-<a href="https://github.com/Azka-05/HAZA-AI" target="_blank" class="project-link">View on GitHub  → </a>
-<h3>AI Sports Coach</h3>
-<p class="muted">An AI-powered training buddy that tailors workouts, gives tips, and keeps users motivated.</p>
-<div class="meta-row">
-<span class="badge">AI integration</span>
-<span class="badge">Prototype</span>
-<span class="badge">24h build</span>
-</div>
-<div class="hero-actions" style="margin-top:14px">
-</div>
-</article>
-<article class="card project reveal" data-tags="design">
-<div class="kicker">Build · May 2025</div>
-<h3>Smart Desk</h3>
-<p class="muted">Inclusive desk prototype for students with learning difficulties — integrated components and tested end-to-end.</p>
-<div class="meta-row">
-<span class="badge">Innovation</span>
-<span class="badge">Hardware</span>
-<span class="badge">3rd place</span>
-</div>
-<div class="hero-actions" style="margin-top:14px">
-</div>
-</article>
-<article class="card project reveal" data-tags="web,design">
-<div class="kicker">Web · Nov 2024</div>
-<h3>Quantum Entanglement Website</h3>
-<a href="https://github.com/Azka-05/Website-on-Quantum-Entanglement" target="_blank" class="project-link">View on GitHub  → </a>
-<p class="muted">Responsive educational site explaining entanglement with clear UI, navigation, and accessibility-first layout.</p>
-<div class="meta-row">
-<span class="badge">HTML</span>
-<span class="badge">CSS</span>
-<span class="badge">UX</span>
-</div>
-<div class="hero-actions" style="margin-top:14px">
-</div>
-</article>
-<article class="card project reveal" data-tags="web,design">
-<div class="kicker">This site</div>
-<h3> Azka's Portfolio </h3>
-    <a href="https://github.com/Azka-05/Azka-Hussain-Personal-Portfolio-Website" target="_blank" class="project-link">View on GitHub  → </a>
+  <canvas class="fx-canvas" id="fx"></canvas>
+  <div aria-hidden="true" class="cursor-glow" id="glow"></div>
 
-<p class="muted">Static, fast, and deployable anywhere — with motion, filters, particles, and tasteful micro-interactions.</p>
-<div class="meta-row">
-<span class="badge">Performance</span>
-<span class="badge">Accessibility</span>
-<span class="badge">No frameworks</span>
-</div>
-<div class="hero-actions" style="margin-top:14px">
-</div>
-</article>
-</section>
-<article class="card reveal">
-  <div class="card-header">
-    <h3>PlainTalk</h3>
-    <a href="https://github.com/Azka-05/PlainTalk" target="_blank" class="project-link">View on GitHub  → </a>
-  </div>
+  <header class="topbar" data-elevate="">
+    <div class="container nav-inner">
+      <a aria-label="Home" class="logo" href="index.html">
+        <span aria-hidden="true" class="logo-badge"></span>
+        <span>Azka Hussain</span>
+      </a>
 
-  <p class="muted">
-    A language simplification tool that rewrites complex text into clearer, more accessible wording.
-    Designed to improve readability and support inclusive communication.
-  </p>
+      <div class="nav">
+        <button aria-expanded="false" aria-label="Open menu" class="nav__toggle">☰</button>
+        <nav aria-label="Primary" class="nav__menu">
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a class="pill" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-  <div class="skill-group" style="margin-top:12px">
-    <span class="chip">AI</span>
-    <span class="chip">Text Processing</span>
-    <span class="chip">Python</span>
-    <span class="chip">Accessibility</span>
-  </div>
-</article>
-<article class="card reveal">
-  <div class="card-header">
-    <h3>IAM Escalation Detector</h3>
-    <a href="https://github.com/sk-whoami/iam-escalation-detector" target="_blank" class="project-link">View on GitHub  → </a>
-  </div>
+  <main class="container">
+    <section class="reveal" id="featured">
+      <div class="kicker">Projects</div>
+      <h1 class="title-gradient">Things I’ve built!</h1>
+      <p class="subtitle">A few favourites — click a project to learn more.</p>
+    </section>
 
-  <p class="muted">
-    A security-focused tool that detects potential privilege escalation risks within IAM policies.
-    Analyses permission structures to identify misconfigurations and security vulnerabilities.
-  </p>
+    <!-- ALL projects in one consistent grid -->
+    <section class="grid three" style="margin-top:16px">
 
-  <div class="skill-group" style="margin-top:12px">
-    <span class="chip">Cyber Security</span>
-    <span class="chip">Cloud IAM</span>
-    <span class="chip">Policy Analysis</span>
-    <span class="chip">Python</span>
-  </div>
-</article>
-<article class="card reveal">
-  <div class="card-header">
-    <h3>Home Energy Coach</h3>
-<a href="https://github.com/Azka-05/Home-energy-coach"
-   target="_blank"
-   class="project-link">
-   View on GitHub →
-</a>  </div>
+      <article class="card project reveal">
+        <div class="kicker">NASA Space Apps · Oct 2025</div>
+        <h3>WeatherBytes</h3>
 
-  <p class="muted">
-    A smart home energy monitoring and recommendation system that analyses household usage patterns
-    and provides personalised suggestions to reduce energy consumption and costs.
-  </p>
+        <a href="https://github.com/Azka-05/4Bytes" target="_blank" rel="noreferrer" class="project-link">
+          View on GitHub →
+        </a>
 
-  <div class="skill-group" style="margin-top:12px">
-    <span class="chip">Data Analysis</span>
-    <span class="chip">Python</span>
-    <span class="chip">Sustainability</span>
-    <span class="chip">Logic Systems</span>
-  </div>
-</article>
-<section class="card reveal" style="margin-top:16px">
-<div class="kicker">Want to see code?</div>
-<div class="grid two" style="align-items:center">
-<p class="muted" style="margin:0">I’m happy to share repos, explain decisions, and walk through how I built something.</p>
-<div class="hero-actions" style="justify-content:flex-end">
-<a class="btn" href="https://github.com/Azka-05" rel="noreferrer" target="_blank">GitHub</a>
-<a class="btn ghost" href="contact.html">Ask a question</a>
-</div>
-</div>
-</section>
-<section class="footer">
-<div class="row">
-<div>© <span id="year"></span> Azka Hussain</div>
-<div style="display:flex;gap:12px;flex-wrap:wrap">
-<a download="" href="Azka_Hussain_CV.docx">CV</a>
-<a href="experience.html">Experience</a>
-</div>
-</div>
-</section>
-</main>
-<script src="app.js"></script>
+        <p class="muted">Real-time weather + NASA AIRS data to predict and visualise extreme weather conditions.</p>
+
+        <div class="meta-row" style="margin-top:14px">
+          <span class="badge">APIs</span>
+          <span class="badge">Data viz</span>
+          <span class="badge">Team build</span>
+        </div>
+      </article>
+
+      <article class="card project reveal">
+        <div class="kicker">University · Sep 2024</div>
+        <h3>Hospital Management System</h3>
+
+        <a href="https://github.com/Azka-05/Hospital-Management-System" target="_blank" rel="noreferrer" class="project-link">
+          View on GitHub →
+        </a>
+
+        <p class="muted">Python-based records system: patients, staff, appointments — with authentication and structured data handling.</p>
+
+        <div class="meta-row" style="margin-top:14px">
+          <span class="badge">Python</span>
+          <span class="badge">CRUD</span>
+          <span class="badge">Auth</span>
+        </div>
+      </article>
+
+      <article class="card project reveal">
+        <div class="kicker">Hack-Nation × MIT Sloan AI Club · Aug 2025</div>
+        <h3>AI Sports Coach</h3>
+
+        <a href="https://github.com/Azka-05/HAZA-AI" target="_blank" rel="noreferrer" class="project-link">
+          View on GitHub →
+        </a>
+
+        <p class="muted">An AI-powered training buddy that tailors workouts, gives tips, and keeps users motivated.</p>
+
+        <div class="meta-row" style="margin-top:14px">
+          <span class="badge">AI integration</span>
+          <span class="badge">Prototype</span>
+          <span class="badge">24h build</span>
+        </div>
+      </article>
+
+      <article class="card project reveal">
+        <div class="kicker">Build · May 2025</div>
+        <h3>Smart Desk</h3>
+
+        <!-- No repo given, so no GitHub button -->
+        <p class="muted" style="margin-top:10px">
+          Inclusive desk prototype for students with learning difficulties — integrated components and tested end-to-end.
+        </p>
+
+        <div class="meta-row" style="margin-top:14px">
+          <span class="badge">Innovation</span>
+          <span class="badge">Hardware</span>
+          <span class="badge">3rd place</span>
+        </div>
+      </article>
+
+      <article class="card project reveal">
+        <div class="kicker">Web · Nov 2024</div>
+        <h3>Quantum Entanglement Website</h3>
+
+        <a href="https://github.com/Azka-05/Website-on-Quantum-Entanglement" target="_blank" rel="noreferrer" class="project-link">
+          View on GitHub →
+        </a>
+
+        <p class="muted">Responsive educational site explaining entanglement with clear UI, navigation, and accessibility-first layout.</p>
+
+        <div class="meta-row" style="margin-top:14px">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">UX</span>
+        </div>
+      </article>
+
+      <article class="card project reveal">
+        <div class="kicker">This site</div>
+        <h3>Azka’s Portfolio</h3>
+
+        <a href="https://github.com/Azka-05/Azka-Hussain-Personal-Portfolio-Website" target="_blank" rel="noreferrer" class="project-link">
+          View on GitHub →
+        </a>
+
+        <p class="muted">Static, fast, and deployable anywhere — with motion, filters, particles, and tasteful micro-interactions.</p>
+
+        <div class="meta-row" style="margin-top:14px">
+          <span class="badge">Performance</span>
+          <span class="badge">Accessibility</span>
+          <span class="badge">No frameworks</span>
+        </div>
+      </article>
+
+      <article class="card project reveal">
+        <div class="kicker">This site</div>
+        <h3>PlainTalk</h3>
+
+        <a href="https://github.com/Azka-05/PlainTalk" target="_blank" rel="noreferrer" class="project-link">
+          View on GitHub →
+        </a>
+
+        <p class="muted">
+          A language simplification tool that rewrites complex text into clearer, more accessible wording.
+          Designed to improve readability and support inclusive communication.
+        </p>
+
+        <div class="meta-row" style="margin-top:14px">
+          <span class="badge">AI</span>
+          <span class="badge">Text Processing</span>
+          <span class="badge">Python</span>
+          <span class="badge">Accessibility</span>
+        </div>
+      </article>
+
+      <article class="card project reveal">
+        <div class="kicker">Security</div>
+        <h3>IAM Escalation Detector</h3>
+
+        <a href="https://github.com/sk-whoami/iam-escalation-detector" target="_blank" rel="noreferrer" class="project-link">
+          View on GitHub →
+        </a>
+
+        <p class="muted">
+          A security-focused tool that detects potential privilege escalation risks within IAM policies.
+          Analyses permission structures to identify misconfigurations and security vulnerabilities.
+        </p>
+
+        <div class="meta-row" style="margin-top:14px">
+          <span class="badge">Cyber Security</span>
+          <span class="badge">Cloud IAM</span>
+          <span class="badge">Policy Analysis</span>
+          <span class="badge">Python</span>
+        </div>
+      </article>
+
+      <article class="card project reveal">
+        <div class="kicker">Sustainability</div>
+        <h3>Home Energy Coach</h3>
+
+        <a href="https://github.com/Azka-05/Home-energy-coach" target="_blank" rel="noreferrer" class="project-link">
+          View on GitHub →
+        </a>
+
+        <p class="muted">
+          A smart home energy monitoring and recommendation system that analyses household usage patterns
+          and provides personalised suggestions to reduce energy consumption and costs.
+        </p>
+
+        <div class="meta-row" style="margin-top:14px">
+          <span class="badge">Data Analysis</span>
+          <span class="badge">Python</span>
+          <span class="badge">Sustainability</span>
+          <span class="badge">Logic Systems</span>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="card reveal" style="margin-top:16px">
+      <div class="kicker">Want to see code?</div>
+      <div class="grid two" style="align-items:center">
+        <p class="muted" style="margin:0">I’m happy to share repos, explain decisions, and walk through how I built something.</p>
+        <div class="hero-actions" style="justify-content:flex-end">
+          <a class="btn" href="https://github.com/Azka-05" rel="noreferrer" target="_blank">GitHub</a>
+          <a class="btn ghost" href="contact.html">Ask a question</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="row">
+        <div>© <span id="year"></span> Azka Hussain</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a download="" href="Azka_Hussain_CV.docx">CV</a>
+          <a href="experience.html">Experience</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
