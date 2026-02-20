@@ -851,4 +851,3 @@ html, body { overflow-x: hidden; }
   .title-gradient .sparkle-jiggle{ animation: none; }
   .title-gradient .sparkle-jiggle::after{ animation: none; opacity: 0; }
 }
-.sparkle-jiggle{ animation-play-state: running !important; }
