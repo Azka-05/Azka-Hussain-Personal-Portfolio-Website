@@ -823,7 +823,35 @@ html, body { overflow-x: hidden; }
   96% { transform: translateY(0) rotate(0.8deg); }
 }
 
-/* Sparkle overlay */
+/* ===== FIX: make gradient work when text is wrapped in a span ===== */
+.title-gradient { 
+  background: none !important; 
+  -webkit-text-fill-color: unset !important;
+}
+
+.title-gradient .sparkle-jiggle{
+  display: inline-block;
+  position: relative;
+
+  /* re-apply the gradient directly to the span */
+  background: linear-gradient(90deg, #ffffff 0%, #caa7ff 35%, #8b5cff 70%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  /* jiggle */
+  will-change: transform;
+  animation: jiggle 2.2s ease-in-out infinite;
+}
+
+@keyframes jiggle{
+  0%, 88%, 100% { transform: translateY(0) rotate(0deg); }
+  92% { transform: translateY(-1px) rotate(-0.8deg); }
+  96% { transform: translateY(0) rotate(0.8deg); }
+}
+
+/* sparkle overlay */
 .title-gradient .sparkle-jiggle::after{
   content:"";
   position:absolute;
@@ -846,7 +874,7 @@ html, body { overflow-x: hidden; }
   100%    { opacity: 0; transform: translateX(16px) scale(0.99); }
 }
 
-/* Respect reduced motion */
+/* reduced motion */
 @media (prefers-reduced-motion: reduce){
   .title-gradient .sparkle-jiggle{ animation: none; }
   .title-gradient .sparkle-jiggle::after{ animation: none; opacity: 0; }
