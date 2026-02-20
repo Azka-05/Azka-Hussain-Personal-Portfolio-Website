@@ -787,3 +787,52 @@ html, body { overflow-x: hidden; }
 @media (hover:hover) and (pointer:fine){
   .home-current:hover::before{ opacity: 1; }
 }
+
+/* ===== Sparkle + Jiggle text ===== */
+.sparkle-jiggle{
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transform: translateZ(0);
+  will-change: transform, filter;
+  animation: jiggle 2.6s ease-in-out infinite;
+}
+
+/* Subtle jiggle (stays "on the spot") */
+@keyframes jiggle{
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  92%      { transform: translateY(0) rotate(0deg); }
+  94%      { transform: translateY(-1px) rotate(-1deg); }
+  96%      { transform: translateY(0) rotate(1deg); }
+  98%      { transform: translateY(-1px) rotate(0deg); }
+}
+
+/* Sparkle shimmer overlay */
+.sparkle-jiggle::after{
+  content: "";
+  position: absolute;
+  inset: -6px -10px;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(circle at 10% 50%, rgba(210,170,255,.9) 0 2px, transparent 3px),
+    radial-gradient(circle at 35% 20%, rgba(255,255,255,.85) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 70% 70%, rgba(210,170,255,.8) 0 2px, transparent 3px),
+    radial-gradient(circle at 90% 30%, rgba(255,255,255,.8) 0 1.5px, transparent 3px);
+  filter: drop-shadow(0 0 10px rgba(180,120,255,.45));
+  animation: sparkles 1.9s ease-in-out infinite;
+}
+
+@keyframes sparkles{
+  0%, 70%  { opacity: 0; transform: translateX(-6px) scale(0.95); }
+  78%      { opacity: 1; transform: translateX(0px) scale(1); }
+  86%      { opacity: 0.2; transform: translateX(6px) scale(1.03); }
+  100%     { opacity: 0; transform: translateX(10px) scale(0.98); }
+}
+
+/* Respect reduced-motion */
+@media (prefers-reduced-motion: reduce){
+  .sparkle-jiggle{ animation: none; }
+  .sparkle-jiggle::after{ animation: none; opacity: 0; }
+}
