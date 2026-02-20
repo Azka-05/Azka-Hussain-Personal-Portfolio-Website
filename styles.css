@@ -788,95 +788,11 @@ html, body { overflow-x: hidden; }
   .home-current:hover::before{ opacity: 1; }
 }
 
-/* ===== Sparkle + Jiggle text ===== */
-.sparkle-jiggle{
-  position: relative;
-  display: inline-block;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  transform: translateZ(0);
-  will-change: transform, filter;
-  animation: jiggle 2.6s ease-in-out infinite;
-}
-
-/* Subtle jiggle (stays "on the spot") */
-@keyframes jiggle{
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  92%      { transform: translateY(0) rotate(0deg); }
-  94%      { transform: translateY(-1px) rotate(-1deg); }
-  96%      { transform: translateY(0) rotate(1deg); }
-  98%      { transform: translateY(-1px) rotate(0deg); }
-}
-
-/* ===== Sparkle + Jiggle (works with gradient headings) ===== */
-.title-gradient .sparkle-jiggle{
-  position: relative;
-  display: inline-block;
-  will-change: transform;
-  animation: jiggle 2.2s ease-in-out infinite;
-}
-
-/* Subtle jiggle */
-@keyframes jiggle{
-  0%, 88%, 100% { transform: translateY(0) rotate(0deg); }
-  92% { transform: translateY(-1px) rotate(-0.8deg); }
-  96% { transform: translateY(0) rotate(0.8deg); }
-}
-
-/* ===== FIX: make gradient work when text is wrapped in a span ===== */
-.title-gradient { 
-  background: none !important; 
-  -webkit-text-fill-color: unset !important;
-}
-
-.title-gradient .sparkle-jiggle{
-  display: inline-block;
-  position: relative;
-
-  /* re-apply the gradient directly to the span */
+/* ===== RESTORE: Gradient headings (bring back missing titles) ===== */
+.title-gradient{
   background: linear-gradient(90deg, #ffffff 0%, #caa7ff 35%, #8b5cff 70%, #ffffff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-
-  /* jiggle */
-  will-change: transform;
-  animation: jiggle 2.2s ease-in-out infinite;
-}
-
-
-@keyframes jiggle{
-  0%, 88%, 100% { transform: translateY(0) rotate(0deg); }
-  92% { transform: translateY(-1px) rotate(-0.8deg); }
-  96% { transform: translateY(0) rotate(0.8deg); }
-}
-
-/* Sparkle overlay only (text stays untouched) */
-.title-gradient .sparkle-jiggle::after{
-  content:"";
-  position:absolute;
-  inset:-10px -14px;
-  pointer-events:none;
-  opacity:0;
-  background:
-    radial-gradient(circle at 12% 40%, rgba(255,255,255,.95) 0 1.6px, transparent 3px),
-    radial-gradient(circle at 35% 20%, rgba(200,150,255,.9) 0 2.2px, transparent 4px),
-    radial-gradient(circle at 72% 70%, rgba(255,255,255,.85) 0 1.6px, transparent 3px),
-    radial-gradient(circle at 90% 35%, rgba(200,150,255,.75) 0 2px, transparent 4px);
-  filter: drop-shadow(0 0 10px rgba(180,120,255,.55));
-  animation: sparkle 1.8s ease-in-out infinite;
-}
-
-@keyframes sparkle{
-  0%, 68% { opacity: 0; transform: translateX(-8px) scale(0.98); }
-  76%     { opacity: 1; transform: translateX(0) scale(1); }
-  86%     { opacity: .25; transform: translateX(10px) scale(1.02); }
-  100%    { opacity: 0; transform: translateX(16px) scale(0.99); }
-}
-
-/* reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .title-gradient .sparkle-jiggle{ animation: none; }
-  .title-gradient .sparkle-jiggle::after{ animation: none; opacity: 0; }
 }
