@@ -652,3 +652,103 @@ body{
 main{
   flex: 1;
 }
+/* =========================
+   MOBILE RESPONSIVE FIXES
+   ========================= */
+
+/* Prevent side-scrolling on mobile */
+html, body { overflow-x: hidden; }
+
+/* Make container breathe on small screens */
+@media (max-width: 900px){
+  .container{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Stack 2-column grids into 1 column */
+  .grid.two,
+  .two,
+  .home-hero-grid,
+  .about-grid,
+  .projects-grid,
+  .experience-grid{
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reduce huge hero heading a bit */
+  .title-gradient,
+  h1{
+    font-size: clamp(2.2rem, 8vw, 3.2rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Make hero section not overflow */
+  main.hero > .home-hero-grid{
+    gap: 22px !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+  }
+
+  /* Make the right card full-width */
+  .home-current{
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 26px !important;
+  }
+
+  /* Buttons wrap nicely */
+  .hero-actions,
+  .home-cta{
+    flex-wrap: wrap !important;
+  }
+  .hero-actions .btn,
+  .home-cta .btn{
+    width: 100% !important;        /* big tap targets */
+    justify-content: center;
+  }
+
+  /* Chips/tags wrap better */
+  .skill-group{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+  .chip{
+    white-space: normal !important; /* allow wrap */
+  }
+
+  /* Footer spacing */
+  footer.footer, .footer{
+    padding: 14px 0 !important;
+  }
+  footer.footer .row, .footer .row{
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* Mobile navbar: make menu usable */
+@media (max-width: 760px){
+  .nav__menu{
+    position: absolute;
+    right: 16px;
+    top: 62px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 14px;
+    background: rgba(20,14,32,0.85);
+    border: 1px solid rgba(255,255,255,0.10);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .nav__toggle{ display: inline-flex !important; }
+
+  /* When JS toggles aria-expanded="true", show menu */
+  .nav__toggle[aria-expanded="true"] + .nav__menu{
+    display: flex;
+  }
+}
