@@ -796,3 +796,6 @@ html, body { overflow-x: hidden; }
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+.projects-grid .card p{
+  margin-bottom: 14px;
+}
