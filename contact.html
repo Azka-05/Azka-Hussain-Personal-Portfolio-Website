@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact — Azka Hussain</title>
+<meta content="Contact Azka Hussain for placements, freelance, and collaboration." name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<canvas class="fx-canvas" id="fx"></canvas>
+<div aria-hidden="true" class="cursor-glow" id="glow"></div>
+<header class="topbar" data-elevate="">
+<div class="container nav-inner">
+<a aria-label="Home" class="logo" href="index.html">
+<span aria-hidden="true" class="logo-badge"></span>
+<span>Azka Hussain</span>
+</a>
+<div class="nav">
+<button aria-expanded="false" aria-label="Open menu" class="nav__toggle">☰</button>
+<nav aria-label="Primary" class="nav__menu">
+<a href="about.html">About</a>
+<a href="experience.html">Experience</a>
+<a href="projects.html">Projects</a>
+<a class="pill" href="contact.html">Contact</a>
+</nav>
+</div>
+</div>
+</header>
+<main class="container">
+<section class="grid contact-grid two">
+<div class="reveal">
+<div class="kicker">Contact</div>
+<h1 class="title-gradient">Let’s build something.</h1>
+<p class="subtitle">Placement opportunities, freelance, collabs — send a message and I’ll reply as soon as I can.</p>
+<div class="card2 direct-block" style="margin-top:12px">
+<div class="kicker">Direct</div>
+<p class="direct-lead">If you’re a recruiter, placement coordinator, or a team looking for a front‑end / software intern, I’d love to chat. Tell me the role, tech stack, and start date — I’ll reply quickly.</p>
+<p class="muted" style="margin:10px 0 0">
+            Email: <a href="mailto:05azka05@gmail.com" style="color:rgba(247,239,255,.92)">05azka05@gmail.com</a><br/>
+            GitHub: <a href="https://github.com/Azka-05" rel="noreferrer" style="color:rgba(247,239,255,.92)" target="_blank">Azka-05</a><br/>
+            LinkedIn: <a href="https://www.linkedin.com/in/azka-hussain-9768822b3" rel="noreferrer" style="color:rgba(247,239,255,.92)" target="_blank">azka-hussain</a>
+</p>
+</div>
+</div>
+<aside class="card reveal">
+<div class="kicker">Quick message</div>
+<form aria-label="Contact form" data-contact-form="" data-to="05azka05@gmail.com">
+<div>
+<label for="name">Your name</label>
+<input autocomplete="name" id="name" name="name" placeholder="e.g. Sam"/>
+</div>
+<div>
+<label for="email">Your email</label>
+<input autocomplete="email" id="email" name="email" placeholder="e.g. sam@company.com" type="email"/>
+</div>
+<div>
+<label for="message">Message</label>
+<textarea id="message" name="message" placeholder="What would you like to build / discuss?" rows="6"></textarea>
+</div>
+<button class="btn" type="submit">Send →</button>
+<div class="form-note" id="formStatus">This will open your email app and send to 05azka05@gmail.com.</div>
+</form>
+</aside>
+</section>
+<section class="card reveal" style="margin-top:16px">
+<div class="kicker">Downloads</div>
+<div class="grid two" style="align-items:center">
+<p class="muted" style="margin:0">CV available as a download — perfect for recruiters and placement teams.</p>
+<div class="hero-actions" style="justify-content:flex-end">
+<a class="btn" download="" href="Azka_Hussain_CV.docx">Download CV</a>
+<a class="btn ghost" href="projects.html">See projects</a>
+</div>
+</div>
+</section>
+<section class="footer">
+<div class="row">
+<div>© <span id="year"></span> Azka Hussain</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+</div>
+</div>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
