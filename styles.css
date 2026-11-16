@@ -182,4 +182,6 @@ body{background:radial-gradient(circle at 16% 8%,rgba(124,58,237,.10),transparen
     height: 100%;
     object-fit: cover;
     object-position: 40% center;
+        transform: scale(0.85);
+
 }
